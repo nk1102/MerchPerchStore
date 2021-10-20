@@ -1,0 +1,114 @@
+                                               Merch Perch Store
+
+
+                                               Introduction
+
+ Merch-Perch Store is an online shopping app where buyers can buy their daily necessities products.
+ Buyers can directly chat with the shop owner and only verified or registered users can access the app that is first they have to sign up or registered themselves for doing further activities. In additional we will also add a dummy payment option which looks like online payment system.
+ The objective of Merch-Perch store is to connect local vendors so that they can enhance their business activities.
+
+
+
+                                              Working Methodology-
+
+ 1) First user has to register/signup. A verification mail will be sent to the user’s entered account.
+
+ 2) After verification user will see a main menu or dashboard where he can select options of buying like (stationary, groceries, clothes etc.)
+
+ 3) After adding items to cart buyer can place order giving his/her personal details for delivery.
+
+4)  For any queries buyer can contact to the shopkeeper by chat or by call.
+
+
+
+
+                                                 EXISTING SYSTEM
+
+ The present scenario for shopping is to visit the shops and market manually and then from the available product list one needs to choose the item he or she wants and then pay for the same item mainly in cash mode is done, as not every society is well educated and aware to use net banking or card modes or wallets etc.
+This system is not much user-friendly as one needs to go to the market physically and then select items only from the available list. So mostly it is difficult to get the product as per our desire. Description About the products is less available and are mostly verbal only. For this type of shopping, one needs to have an ample amount of free time.
+Also, not really good markets exist everywhere, so many times good markets become out of reach for certain people.
+
+
+                                                USE OF THE PROJECT
+
+Customers can purchase items from the comfort of their own homes or work place. Shopping is made easier and convenient for the customer through internet.
+Generally, in physical stores, the sales representatives try to influence the buyers to buy the product. There can be some kind of pressure, whereas the customers are not pressurized in any way in online stores.
+Customer do not have to stand in queues in cash counters to pay for the products that have been purchased by them. They can shop from their home or work place and do not have to spend time traveling.
+
+
+
+                                                Feasibility of Project
+
+1) Economic Feasibility: The project is economically feasible as the only cost involved is having a computer with the minimum requirements mentioned earlier. For the users to access the application, the only cost involved will be in getting access to the Internet.
+
+2) Technical Feasibility: To deploy the application, the only technical aspects needed are mentioned below:
+
+
+3) Operating Environment: Android Studio and Firebase console.
+
+4) For Users: Internet Browser Internet Connection.
+
+5)   Behavioral Feasibility: The application requires no special technical guidance and all the views available in the application are self-explanatory. The users are well guided with warning and failure messages for all the actions taken.
+
+
+
+
+
+                                            Functional Specification
+
+ The system must provide following functionalities:-
+
+1) Keeping records of registered customers
+
+2) keeping records of products
+
+3) keeping the daily sale
+
+4) Storing the feedback given by the customer
+
+5) keeping the details about the product
+
+6) Storing the items selected by the customer in the temporary storage.
+
+
+
+                                                Software Specification:
+
+                                 Technology Implemented	: Front-End Technologies
+
+                                  Language Used			: Java
+
+                                    Database			: Firebase Console (Firebase)
+
+                              User Interface Design		: XML
+
+                                    Web Browser			: Not Required
+
+
+
+
+
+                                               Hardware Requirements:
+
+
+
+
+
+                                    Processor			: Intel core i5/i7 / AMD Ryzen-3
+
+                                    Operating System	: Windows 8/10
+
+                                            RAM			: 4 GB (Minimum) 8GB (Recommended)
+
+                                       Hardware Devices	: Graphic card, motherboard and memory
+
+                                            Hard disk	: 64GB
+
+
+
+                                                    FUTURE SCOPE
+
+In the foreseeable future, e-commerce will be confirmed as the major tool of sale for the goods and services. Successful e-commerce will become the notion which will be inseparable from the web because e-shopping is becoming more and more popular and natural.
+Thus, prevailing to future trends, e-commerce will have huge potential growth in sales and promotion.Each year, there is a continuous growth in e-commerce deals. The volumes of sales for online store are much higher than the brick and mortars.
+To the present day, the internet sales boom the foundation for magnificent e-commerce future. To attract more customers, owners will not only have to increase the number of services available to them but also have to pay more attention to such elements like design, good presentation, etc.
+
