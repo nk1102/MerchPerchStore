@@ -74,15 +74,13 @@ Customer do not have to stand in queues in cash counters to pay for the products
 
                                                 Software Specification:
 
-                                 Technology Implemented	: Front-End Technologies
+                                 Technology Implemented	: Native Android ( Front end & back end )
 
                                   Language Used			: Java
 
-                                    Database			: Firebase Console (Firebase)
+                                    Database			: Cloud Database (Firebase)
 
-                              User Interface Design		: XML
-
-                                    Web Browser			: Not Required
+                              User Interface Design		: Adobe XD
 
 
 
@@ -94,15 +92,13 @@ Customer do not have to stand in queues in cash counters to pay for the products
 
 
 
-                                    Processor			: Intel core i5/i7 / AMD Ryzen-3
+                                    Processor			: Intel core i5 / AMD Ryzen-3 (minimum)
 
-                                    Operating System	: Windows 8/10
+                                    Operating System	: Windows 8/10 , Linux , MacOS
 
                                             RAM			: 4 GB (Minimum) 8GB (Recommended)
 
-                                       Hardware Devices	: Graphic card, motherboard and memory
-
-                                            Hard disk	: 64GB
+                                            Hard disk	: 256 GB ( minimum )
 
 
 
