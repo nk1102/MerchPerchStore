@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "548998130778",
+    "firebase_url": "https://merch-perch-store-957d6-default-rtdb.firebaseio.com",
+    "project_id": "merch-perch-store-957d6",
+    "storage_bucket": "merch-perch-store-957d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548998130778:android:bbd548e3a3b4226c8e3c63",
+        "android_client_info": {
+          "package_name": "com.merchperch.merchperchstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548998130778-g5ho0a4qurftj36hh2r24lfrf1d3kkvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0h-2YrCveIQxunMeGDfQBJ4lKkTbPNnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548998130778-g5ho0a4qurftj36hh2r24lfrf1d3kkvl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
