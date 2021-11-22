@@ -63,20 +63,10 @@ public class LoginActivity extends AppCompatActivity {
 
 
     FirebaseAuth firebaseAuth;
-
+    ProgressBar progressBar;
     DatabaseReference reference;
     private GoogleSignInClient mGoogleSignInClient;
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        if (firebaseAuth.getCurrentUser() != null){
-            Intent intent =new Intent(LoginActivity.this,MainActivity.class);
-            startActivity(intent);
-            finish();
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,10 +80,11 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
 
+
         /**
          * Variables are Initialised here
          */
-
+        progressBar =findViewById(R.id.progressBarLoginActivity);
         email = findViewById(R.id.editTextTextEmailAddressLoginActivity);
         password = findViewById(R.id.editTextTextPasswordLoginActivity);
         registerBtn = findViewById(R.id.registerbtnloginactivity);
@@ -102,6 +93,7 @@ public class LoginActivity extends AppCompatActivity {
         googleBtn = findViewById(R.id.googlebtnloginactivty);
         firebaseAuth = FirebaseAuth.getInstance();
         reference = FirebaseDatabase.getInstance().getReference();
+
 
         View parentLayout = findViewById(android.R.id.content);
 
@@ -138,13 +130,13 @@ public class LoginActivity extends AppCompatActivity {
                     password.setError("Password cannot be empty");
                 }
                 else{
-                //    progressBar.setVisibility(View.VISIBLE);
+                    progressBar.setVisibility(View.VISIBLE);
                     firebaseAuth.signInWithEmailAndPassword(emailId,userPassword)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull  Task<AuthResult> task) {
                                     if (task.isSuccessful()){
-                                     //   progressBar.setVisibility(View.GONE);
+                                        progressBar.setVisibility(View.GONE);
                                         if(firebaseAuth.getCurrentUser().isEmailVerified()) {
                                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                             Log.e("EmailVerification", "Email verified successfully ");
@@ -168,7 +160,7 @@ public class LoginActivity extends AppCompatActivity {
                             }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull  Exception e) {
-                            //progressBar.setVisibility(View.GONE);
+                            progressBar.setVisibility(View.GONE);
                             Log.e("LoginException", "FirebaseException: Login Failure " + e.getMessage());
                             View parentLayout = findViewById(android.R.id.content);
                             Snackbar.make(parentLayout,e.getLocalizedMessage(), Snackbar.LENGTH_LONG)
@@ -182,7 +174,7 @@ public class LoginActivity extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // progressBar.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.VISIBLE);
                 startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
 
                 finish();
@@ -192,8 +184,8 @@ public class LoginActivity extends AppCompatActivity {
         forgotPwd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             //   progressBar.setVisibility(View.VISIBLE);
-               // startActivity(new Intent(LoginActivity.this,ResetPasswordActivity.class));
+                progressBar.setVisibility(View.VISIBLE);
+                startActivity(new Intent(LoginActivity.this,ForgotPasswordActivity.class));
 
             }
 
@@ -216,11 +208,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-
     private void createRequest() {
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("548998130778-g5ho0a4qurftj36hh2r24lfrf1d3kkvl.apps.googleusercontent.com")
+                .requestIdToken("548998130778-95gjqng8dpsri647o9700f2cef5d50l3.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
 
@@ -236,17 +227,17 @@ public class LoginActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
-               // progressBar.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.VISIBLE);
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 Log.e(TAG, "firebaseAuthWithGoogle:" + account.getId());
                 firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
-              //  progressBar.setVisibility(View.GONE);
+                progressBar.setVisibility(View.GONE);
                 Log.e(TAG, "Google sign in failed", e.getCause());
             }
         }
@@ -284,10 +275,6 @@ public class LoginActivity extends AppCompatActivity {
                             HashMap<String , String> hashMap = new HashMap<>();
                             hashMap.put("id",user.getUid());
                             hashMap.put("username",user.getDisplayName());
-
-                            hashMap.put("imageURL","default");
-                            hashMap.put("status","offline");
-                            hashMap.put("search",user.getDisplayName().toLowerCase());
                             hashMap.put("Email",user.getEmail());
 
 
@@ -304,7 +291,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                         } else {
-                          //  progressBar.setVisibility(View.GONE);
+                            progressBar.setVisibility(View.GONE);
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
 
@@ -322,5 +309,4 @@ public class LoginActivity extends AppCompatActivity {
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
-
 }

@@ -48,6 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
     DatabaseReference firebaseDatabase;
     AlertDialog.Builder builder;
     AlertDialog progressDialog;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance().getReference();
         registerbtn = findViewById(R.id.registerbtnregisteractivity);
         Loginbtn = findViewById(R.id.LoginBtnregisteractivity);
+        progressBar = findViewById(R.id.progressBar);
 
 
         /**
@@ -77,7 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
         Loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                progressBar.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
@@ -105,7 +107,7 @@ public class RegisterActivity extends AppCompatActivity {
         registerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                progressBar.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.VISIBLE);
                 String txt_email = email.getText().toString();
 
 
@@ -123,10 +125,10 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
                 if (txt_password.isEmpty()) {
-                   // progressBar.setVisibility(GONE);
+                   progressBar.setVisibility(GONE);
                     password.setError("Password Cannot be empty");
                 } else if (txt_password.length() <= 6) {
-                   // progressBar.setVisibility(GONE);
+                   progressBar.setVisibility(GONE);
                     Snackbar.make(parentLayout, "Password cannot be of less than 6 digits", Snackbar.LENGTH_LONG)
                             .setAction("Ok", new View.OnClickListener() {
                                 @Override
@@ -135,7 +137,7 @@ public class RegisterActivity extends AppCompatActivity {
                             })
                             .setActionTextColor(getResources().getColor(R.color.white))
                             .show();
-//                    Enhance.showInterstitialAd();
+
                 } else {
 
                     firebaseAuth.createUserWithEmailAndPassword(txt_email, txt_password)
@@ -146,7 +148,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     if (task.isSuccessful()) {
 
 
-                                     //   progressBar.setVisibility(GONE);
+                                       progressBar.setVisibility(GONE);
                                         /**
                                          * Code for verification of email
                                          */
@@ -163,10 +165,8 @@ public class RegisterActivity extends AppCompatActivity {
                                         HashMap<String, String> hashMap = new HashMap<>();
                                         hashMap.put("id", userId);
                                         hashMap.put("username", txt_name);
-                                        hashMap.put("imageURL", "default");
+
                                         hashMap.put("Email", txt_email);
-                                        hashMap.put("status", "offline");
-                                        hashMap.put("search", txt_name.toLowerCase());
 
                                         firebaseDatabase.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
@@ -202,7 +202,7 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             Log.e("LoginException", "FirebaseException: " + e.getMessage());
-                           // progressBar.setVisibility(GONE);
+                            progressBar.setVisibility(GONE);
                             Snackbar.make(parentLayout, e.getLocalizedMessage(), Snackbar.LENGTH_LONG)
                                     .show();
 

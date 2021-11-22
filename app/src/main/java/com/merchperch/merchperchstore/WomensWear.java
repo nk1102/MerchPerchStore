@@ -8,45 +8,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.google.firebase.auth.FirebaseAuth;
-
-public class MainActivity extends AppCompatActivity {
+public class WomensWear extends AppCompatActivity {
     ImageButton ib1,ib2,ib3;
-    Button b1;
-    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        /**
-         * Code by Rishabh
-         */
-
+        setContentView(R.layout.activity_womens_wear);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().hide();
-        ib1=findViewById(R.id.imageButton18);
-        //Clothing
-        ib2=findViewById(R.id.imageButton19);
-        //electronics
-        ib3=findViewById(R.id.imageButton20);
-        //menu
-        b1=findViewById(R.id.button);
-        //logout
-        firebaseAuth = FirebaseAuth.getInstance();
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                firebaseAuth.signOut();
-                Intent l=new Intent(MainActivity.this,LoginActivity.class);
-                startActivity(l);
-                finish();
-            }
-        });
+        ib1=findViewById(R.id.tops);
+        //tops and kurtas
+        ib2=findViewById(R.id.heals);
+        //shoes
+        ib3=findViewById(R.id.back2);
         ib1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this,Clothing.class);
+                Intent i=new Intent(WomensWear.this,Tops.class);
                 startActivity(i);
                 finish();
             }
@@ -54,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         ib2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent j=new Intent(MainActivity.this,Electronics.class);
+                Intent j=new Intent(WomensWear.this,Heals.class);
                 startActivity(j);
                 finish();
             }
@@ -62,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         ib3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent k=new Intent(MainActivity.this,Menu.class);
+                Intent k=new Intent(WomensWear.this,Clothing.class);
                 startActivity(k);
                 finish();
             }

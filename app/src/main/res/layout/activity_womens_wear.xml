@@ -4,65 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu">
+    tools:context=".WomensWear">
 
     <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="412dp"
-        android:layout_height="367dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        android:id="@+id/tops"
+        android:layout_width="419dp"
+        android:layout_height="355dp"
+        app:layout_constraintBottom_toTopOf="@+id/heals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/spartan" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dress" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="416dp"
-        android:layout_height="348dp"
-        android:layout_marginBottom="4dp"
+        android:id="@+id/heals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
-        app:srcCompat="@drawable/app3" />
+        app:layout_constraintTop_toBottomOf="@+id/tops"
+        app:srcCompat="@drawable/heals" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="STATIONERY"
-        android:textColor="#6BFFC107"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        android:text="TOPS AND KURTAS "
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toTopOf="@+id/tops"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
-        app:layout_constraintVertical_bias="0.188" />
+        app:layout_constraintTop_toBottomOf="@+id/tops"
+        app:layout_constraintVertical_bias="0.84" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="OTHER ITEMS"
-        android:textColor="@color/white"
-        android:textSize="22sp"
+        android:text="SHOES"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintBottom_toTopOf="@+id/heals"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintTop_toBottomOf="@+id/heals"
+        app:layout_constraintVertical_bias="0.782" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/back2"
         android:layout_width="78dp"
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
@@ -72,5 +72,4 @@
         app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/white"
         app:srcCompat="?attr/actionModeCloseDrawable" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

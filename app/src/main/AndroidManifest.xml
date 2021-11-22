@@ -9,7 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MerchPerchStore">
-        <activity android:name=".Menu"></activity>
+        <activity android:name=".DisplayItem"></activity>
+        <activity android:name=".Heals" />
+        <activity android:name=".Tops" />
+        <activity android:name=".Shoes" />
+        <activity android:name=".BottomWear" />
+        <activity android:name=".Formals" />
+        <activity android:name=".WomensWear" />
+        <activity android:name=".MensWear" />
+        <activity android:name=".OtherItems" />
+        <activity android:name=".Stationery" />
+        <activity android:name=".Electronics" />
+        <activity android:name=".Clothing" />
+        <activity android:name=".Menu" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
         <activity
