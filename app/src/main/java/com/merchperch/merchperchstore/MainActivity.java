@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         ib2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent j=new Intent(MainActivity.this,Electronics.class);
+                Intent j=new Intent(MainActivity.this, Electronics.class);
                 startActivity(j);
                 finish();
             }

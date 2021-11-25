@@ -26,7 +26,7 @@ public class MensWear extends AppCompatActivity {
         ib1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MensWear.this,Formals.class);
+                Intent i=new Intent(MensWear.this, Formals.class);
                 startActivity(i);
                 finish();
             }
@@ -34,7 +34,7 @@ public class MensWear extends AppCompatActivity {
         ib2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent j=new Intent(MensWear.this,BottomWear.class);
+                Intent j=new Intent(MensWear.this, BottomWear.class);
                 startActivity(j);
                 finish();
             }
@@ -42,7 +42,7 @@ public class MensWear extends AppCompatActivity {
         ib3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent k=new Intent(MensWear.this,Shoes.class);
+                Intent k=new Intent(MensWear.this, Shoes.class);
                 startActivity(k);
                 finish();
             }

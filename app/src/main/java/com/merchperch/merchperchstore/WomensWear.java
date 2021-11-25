@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class WomensWear extends AppCompatActivity {
@@ -25,7 +24,7 @@ public class WomensWear extends AppCompatActivity {
         ib1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(WomensWear.this,Tops.class);
+                Intent i=new Intent(WomensWear.this, Tops.class);
                 startActivity(i);
                 finish();
             }
@@ -33,7 +32,7 @@ public class WomensWear extends AppCompatActivity {
         ib2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent j=new Intent(WomensWear.this,Heals.class);
+                Intent j=new Intent(WomensWear.this, Heals.class);
                 startActivity(j);
                 finish();
             }
