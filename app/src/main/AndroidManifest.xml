@@ -27,6 +27,8 @@
         <activity android:name=".ForgotPasswordActivity"/>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".PlaceOrder"/>
+        <activity android:name=".ConfrimOrder"/>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
