@@ -16,7 +16,10 @@ public class OtherItems extends AppCompatActivity {
         setContentView(R.layout.activity_other_items);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().hide();
-        ib1 = findViewById(R.id.imageButtonOI);
+        /**
+         * change below line
+         */
+        ib1 = findViewById(R.id.OtherItemBack);
         ib1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -164,7 +164,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                                         HashMap<String, String> hashMap = new HashMap<>();
                                         hashMap.put("id", userId);
-                                        hashMap.put("username", txt_name);
+                                        hashMap.put("Name", txt_name);
 
                                         hashMap.put("Email", txt_email);
 

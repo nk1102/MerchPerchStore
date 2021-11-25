@@ -21,6 +21,8 @@
         <activity android:name=".Stationery" />
         <activity android:name=".Electronics" />
         <activity android:name=".Clothing" />
+        <activity android:name=".PlaceOrder"/>
+        <activity android:name=".ConfrimOrder"/>
         <activity android:name=".Menu" />
         <activity android:name=".ForgotPasswordActivity"/>
         <activity android:name=".RegisterActivity" />

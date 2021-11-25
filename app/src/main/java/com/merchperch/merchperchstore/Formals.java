@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -32,18 +33,21 @@ public class Formals extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Formals.this, "ITEM ADDED TO CART", Toast.LENGTH_SHORT).show();
+                Log.e("TAG","White shirt  has been added to the cart ");
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Formals.this, "ITEM ADDED TO CART", Toast.LENGTH_SHORT).show();
+                Log.e("TAG","Purple shirt  has been added to the cart ");
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Formals.this, "ITEM ADDED TO CART", Toast.LENGTH_SHORT).show();
+                Log.e("TAG","Black shirt  has been added to the cart ");
             }
         });
         b4.setOnClickListener(new View.OnClickListener() {

@@ -20,12 +20,12 @@ public class Shoes extends AppCompatActivity {
         setContentView(R.layout.activity_shoes);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().hide();
-        b1=findViewById(R.id.BlackTrouser);
-        b2=findViewById(R.id.SkinTrouser);
-        b3=findViewById(R.id.CreamWhiteTrouser);
+        b1=findViewById(R.id.addidasDaily);
+        b2=findViewById(R.id.BlackFormals);
+        b3=findViewById(R.id.BrownFormals);
         b4=findViewById(R.id.PlaceS);
         b5=findViewById(R.id.ContinueS);
-        ib1=findViewById(R.id.Bottomwearback4);
+        ib1=findViewById(R.id.shoesback4);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
